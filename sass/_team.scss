@@ -1,0 +1,186 @@
+.team-profile {
+  padding-block: 34px 46px;
+  background: #fff;
+}
+
+.team-profile-inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.team-profile-photo {
+  display: block;
+  width: 178px;
+  height: 178px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-profile h1 {
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-size: 25px;
+}
+
+.team-profile-role {
+  margin-bottom: 13px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.team-profile-bio {
+  max-width: 470px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.team-profile-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.team-profile-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.team-profile-socials img {
+  display: block;
+  max-width: 16px;
+  max-height: 16px;
+  object-fit: contain;
+}
+
+.team-posts {
+  padding-block: 48px 56px;
+  background: var(--aqua);
+}
+
+.team-section-marker {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin-bottom: 7px;
+  background: var(--purple);
+}
+
+.team-posts h2 {
+  margin-bottom: 22px;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.team-post-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.team-post-card {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+  min-width: 0;
+  background: #fff;
+}
+
+.team-post-image {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.team-post-image img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+
+.team-post-image:hover img {
+  transform: scale(1.04);
+}
+
+.team-post-copy {
+  align-self: center;
+  min-width: 0;
+  padding: 16px;
+}
+
+.team-post-copy > p {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.team-post-copy h3 {
+  margin-bottom: 11px;
+  font-size: 14px;
+}
+
+.team-post-copy h3 a:hover,
+.team-post-copy h3 a:focus-visible {
+  color: var(--purple);
+}
+
+.team-post-copy .blog-author {
+  margin-bottom: 10px;
+}
+
+.team-post-copy > .text-link {
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .team-profile {
+    padding-block: 34px 40px;
+  }
+
+  .team-profile-photo {
+    width: 156px;
+    height: 156px;
+  }
+
+  .team-post-grid {
+    gap: 12px;
+  }
+
+  .team-post-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-post-image img {
+    height: 175px;
+  }
+}
+
+@media (max-width: 560px) {
+  .team-profile-photo {
+    width: 144px;
+    height: 144px;
+  }
+
+  .team-posts {
+    padding-block: 40px;
+  }
+
+  .team-post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-post-card {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+  }
+
+  .team-post-image img {
+    height: 155px;
+  }
+}

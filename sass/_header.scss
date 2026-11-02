@@ -1,0 +1,82 @@
+.site-header {
+  position: relative;
+  z-index: 2;
+  background: #232536;
+  color: #fff;
+}
+
+.header-inner {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand,
+.footer-brand > a {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.brand img,
+.footer-brand > a img {
+  display: block;
+  width: 122px;
+  height: auto;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.2vw, 32px);
+  color: rgba(255, 255, 255, .76);
+  font-size: 13px;
+}
+
+.main-nav a {
+  transition: color .2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.main-nav [aria-current="page"] {
+  color: #fff;
+}
+
+.main-nav .nav-cta {
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 2px;
+  padding: 0 0 0 18px;
+  border-left: 1px solid rgba(255, 255, 255, .18);
+  color: #ffd3af;
+}
+
+.nav-cta span {
+  font-size: 19px;
+}
+
+@media (max-width: 760px) {
+  .header-inner {
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding-block: 22px;
+  }
+
+  .main-nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    font-size: 13px;
+  }
+
+  .main-nav .nav-cta {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
